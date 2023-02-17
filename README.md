@@ -1,5 +1,5 @@
 # ALX Simple Shell Team Project
-This is ALX simple shell project. This was done collaboratively. We where asked to create a simple shell that mimics the Bash shell used on Ubuntu and Linux systems. dash will be used to prompt our shell.
+This is ALX simple shell project. This was done collaboratively. We where asked to create a simple shell that mimics the Bash shell used on Ubuntu and Linux systems. hsh will be used to prompt our shell.
 
 # Project was developped using the following code / language
 
@@ -40,7 +40,7 @@ This is ALX simple shell project. This was done collaboratively. We where asked 
 
 # Description
 
-    dash is a simple UNIX interpreter that gets command from a file or from a       user input and executes them 
+    hsh is a simple UNIX interpreter that gets command from a file or from a       user input and executes them 
 
 # How hsh works
       1. Prints a prompt and waits for a command from the user
