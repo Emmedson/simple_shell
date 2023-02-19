@@ -1,17 +1,20 @@
-#include "main.h"
+#include "shell.h"
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
 * main - check the code
 * Return: Always 0.
 */
-int main(void)
-{
-char *concat;
 
-concat = string_nconcat("Best ", "School !!!", 6);
-printf("%s\n", concat);
-free(concat);
-return (0);
+/**int main(void)
+{
+	int a, b, c;
+
+	a = 20;
+	b = 30;
+
+	c = a + b;
+
+	printf("The sum of a and b is %d/n", c);
+	return (0);
 }
+*/
