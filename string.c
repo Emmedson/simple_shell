@@ -1,111 +1,75 @@
 #include "shell.h"
 
 /**
-* _strcat - ncatenates two strings
-*
-* @dest: Destination string
-*
-* @src: Origin string
-* Return: Always 0
-*/
-
-char *_strcat(char *dest, char *src)
-{
-	int i, j = 0;
-
-	for (i = 0; dest[i] != '\0'; i++)
-	{
-	}
-	for (j = 0; src[j] != '\0'; j++)
-	{
-	dest[i] = src[j];
-	i++;
-
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-
-
-/**
-* _strcmp - Compares two strings
-*
-* @s1: a string
-* @s2: Another string
-*
-* Return: multiple returns
-*
-*/
-
-int _strcmp(char *s1, char *s2)
-{
-	int i = 0;
-	int val;
-
-	while (s1[i] != 0 && s2[i] != 0 && s1[i] == s2[i])
-	i++;
-	val = s1[i] - s2[i];
-	return (val);
-
-}
-
-/**
-* _strlen - gets the size of a string
-* @s: the string to measure
-* Return: the length of the string
-*/
-
+ *  * _strlen - returns the length of a string
+ *   * @s: the string whose length to check
+ *    *
+ *     * Return: integer length of string
+ *      */
 int _strlen(char *s)
 {
-	int i;
+		int i = 0;
 
-	for (i = 0; s[i] != 0; i++)
-	;
+			if (!s)
+						return (0);
 
-	return (i);
+				while (*s++)
+							i++;
+					return (i);
 }
 
 /**
-*_strncmp -  function that compares two strings.
-*@s1: string one
- *@s2: string two
-*@n: number of characters
-* Return: diference
-*/
-
-size_t _strncmp(char *s1, char *s2, size_t n)
+ *  * _strcmp - performs lexicogarphic comparison of two strangs.
+ *   * @s1: the first strang
+ *    * @s2: the second strang
+ *     *
+ *      * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
+ *       */
+int _strcmp(char *s1, char *s2)
 {
-	size_t i, j;
-
-	for (j = 0; s1[j] != '\0' && j < n; j++)
-	{
-	i = s1[j] - s2[j];
-
-	if (i != 0)
-	{
-	return (i);
-	}
-	}
-	return (0);
+		while (*s1 && *s2)
+				{
+							if (*s1 != *s2)
+											return (*s1 - *s2);
+									s1++;
+											s2++;
+												}
+			if (*s1 == *s2)
+						return (0);
+				else
+							return (*s1 < *s2 ? -1 : 1);
 }
 
 /**
-* _strcpy - copies the string pointed to by src into dest
-* @dest: destination of the copy
-* @src: source of the copy
-*
-* Return: char pointer to dest
-*/
-
-char *_strcpy(char *dest, char *src)
+ *  * starts_with - checks if needle starts with haystack
+ *   * @haystack: string to search
+ *    * @needle: the substring to find
+ *     *
+ *      * Return: address of next char of haystack or NULL
+ *       */
+char *starts_with(const char *haystack, const char *needle)
 {
-	int i = 0;
+		while (*needle)
+					if (*needle++ != *haystack++)
+									return (NULL);
+			return ((char *)haystack);
+}
 
-	for (i = 0; src[i] != '\0'; i++)
-	{
-	dest[i] = src[i];
-	}
-	dest[i + 1] = 0;
-	return (dest);
+/**
+ *  * _strcat - concatenates two strings
+ *   * @dest: the destination buffer
+ *    * @src: the source buffer
+ *     *
+ *      * Return: pointer to destination buffer
+ *       */
+char *_strcat(char *dest, char *src)
+{
+		char *ret = dest;
+
+			while (*dest)
+						dest++;
+				while (*src)
+							*dest++ = *src++;
+					*dest = *src;
+						return (ret);
 }
