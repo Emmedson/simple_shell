@@ -3,8 +3,7 @@
 /**
 * main - check the code
 * Return: Always 0.
-*/
-/**
+**/
 int main(void)
 {
 	int a, b, c;
@@ -14,5 +13,4 @@ int main(void)
 	c = a + b;
 	printf("The sum of a and b is %d/n", c);
 	return (0);
-	}
-*/
+}
