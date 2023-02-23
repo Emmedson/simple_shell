@@ -4,9 +4,8 @@ This is ALX simple shell project. This was done collaboratively. We where asked 
 # Project was developped using the following code / language
 
     1. C language - Main coding language for the project
-    2. Shell - Vi waas used 
-    3. Betty linter - used to check the file for currect syntax. 
-
+    2. Shell - Vi waas used
+    3. Betty linter - used to check the file for currect syntax.
 # General Requirement for project
 
     1. Allowed editors: vi, vim, emacs
@@ -40,7 +39,7 @@ This is ALX simple shell project. This was done collaboratively. We where asked 
 
 # Description
 
-    hsh is a simple UNIX interpreter that gets command from a file or from a       user input and executes them 
+	hsh is a simple UNIX interpreter that gets command from a file or from a       user input and executes them
 
 # How hsh works
       1. Prints a prompt and waits for a command from the user
@@ -51,16 +50,14 @@ This is ALX simple shell project. This was done collaboratively. We where asked 
       6. The program is ready to receive a new command
       7. To exit: press Ctrl-D or enter "exit" (with or without a status)
       8. Works also in non interactive mode
-      
 # Compilation
-      gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o dash
-      
+      gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shs
 
 # List of allowed functions and system calls
     1. access (man 2 access)
 
       access, faccessat, faccessat2 - check user's permissions for a
-      file. It checks if the user has a read/write and execute permission. 
+file. It checks if the user has a read/write and execute permission.
 
     2. chdir (man 2 chdir)
 
